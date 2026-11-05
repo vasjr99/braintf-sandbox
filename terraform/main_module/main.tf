@@ -362,12 +362,12 @@ module "oidc" {
 
 # ======================= IAM Roles and Policies for Lambda =======================
 module "iam" {
-  source              = "../modules/iam"
-  count               = var.ai_handler_create ? 1 : 0
-  region              = local.region
-  account_id          = local.account_id
-  artifacts_bucket    = local.artifacts_bucket
-  ai_handler_create   = var.ai_handler_create
+  source               = "../modules/iam"
+  count                = var.ai_handler_create ? 1 : 0
+  region               = local.region
+  account_id           = local.account_id
+  artifacts_bucket     = local.artifacts_bucket
+  ai_handler_create    = var.ai_handler_create
   kms_key_arn          = module.s3_bucket_kms_key.key_arn
   instance_id          = var.instance_id
   dynamodb_table_name  = local.ai_dynamodb_table_name
