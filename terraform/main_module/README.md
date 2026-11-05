@@ -4,7 +4,7 @@
 ## Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.11 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 6.66 |
 | <a name="requirement_external"></a> [external](#requirement\_external) | ~> 2.3 |
@@ -15,7 +15,7 @@
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 6.66 |
 | <a name="provider_external"></a> [external](#provider\_external) | ~> 2.3 |
 | <a name="provider_random"></a> [random](#provider\_random) | ~> 3.9 |
@@ -23,7 +23,7 @@
 ## Modules
 
 | Name | Source | Version |
-|------|--------|---------|
+| ---- | ------ | ------- |
 | <a name="module_ai_dynamodb_table"></a> [ai\_dynamodb\_table](#module\_ai\_dynamodb\_table) | ../modules/dynamodb | n/a |
 | <a name="module_ai_lambda"></a> [ai\_lambda](#module\_ai\_lambda) | ../modules/lambdas | n/a |
 | <a name="module_artifacts_bucket"></a> [artifacts\_bucket](#module\_artifacts\_bucket) | ../modules/bucket | n/a |
@@ -37,7 +37,7 @@
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [random_password.lambda_webhook_secret](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password) | resource |
 | [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
 | [aws_iam_openid_connect_provider.vcs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_openid_connect_provider) | data source |
@@ -47,7 +47,7 @@
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_ai_api_base_url"></a> [ai\_api\_base\_url](#input\_ai\_api\_base\_url) | The API base URL for the AI service | `string` | n/a | yes |
 | <a name="input_ai_handler_create"></a> [ai\_handler\_create](#input\_ai\_handler\_create) | Whether to create AI handler webhooks. | `bool` | `false` | no |
 | <a name="input_ai_temperature"></a> [ai\_temperature](#input\_ai\_temperature) | The sampling temperature for the AI model. Must be between 0 and 2. | `number` | n/a | yes |
